@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8bc34a"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/percentCounter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Percent counter"
+        android:textColor="#000"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/percentImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/percentsign"
+        android:layout_margin="20dp"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <EditText
+        android:id="@+id/plain_text_input"
+        style="@style/amountText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFD700"
+        android:hint="Enter amount"
+        android:inputType="number"
+        android:layout_margin="40dp"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="282dp" />
+
+    <GridLayout
+        android:id="@+id/gdl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="6"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            style="@style/percentText"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:text="0%" />
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="5" />
+    </GridLayout>
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="6"
+    android:layout_marginRight="20dp">
+    <TextView
+        style="@style/percentText"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:text="Tip"
+        android:inputType="number"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_columnWeight="5"
+        android:background="#FFD700" />
+</GridLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="6"
+        android:layout_marginRight="20dp">
+        <TextView
+            style="@style/percentText"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:text="Total"
+            android:inputType="number"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="5"
+            android:background="#FFD700" />
+    </GridLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:background="#FFD700"
+        android:layout_margin="20dp"
+        android:text="Result"
+        style="@style/resultText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Andrius Morozovas"
+        style="@style/name"/>
+</LinearLayout>
